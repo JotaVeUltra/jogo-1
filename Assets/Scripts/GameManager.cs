@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public List<GameObject> escolhas;
     public int pontuacao;
     //Variável para mostrar a pontuação na tela de jogo
     public Text textPontuacao;
