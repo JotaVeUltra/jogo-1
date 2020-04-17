@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public List<GameObject> escolhas;
+    public int indiceEscolha = 1;
+    public GameObject escolha;
     public int pontuacao;
     //Variável para mostrar a pontuação na tela de jogo
     public Text textPontuacao;
@@ -38,6 +40,19 @@ public class GameManager : MonoBehaviour
         if(Input.GetMouseButtonDown(0))
         {
 
+        }
+        if (Input.GetKeyDown(KeyCode.LeftArrow)) {
+            indiceEscolha = (indiceEscolha + 1) % 10;
+            escolha = escolhas[indiceEscolha];
+            FindObjectOfType<Movement>().destination = escolha;
+        }
+        if (Input.GetKeyDown(KeyCode.RightArrow)) {
+            indiceEscolha = (indiceEscolha + 9) % 10;
+            escolha = escolhas[indiceEscolha];
+            FindObjectOfType<Movement>().destination = escolha;
+        }
+        if (Input.GetKeyDown(KeyCode.Return)) {
+            
         }
     }
 
