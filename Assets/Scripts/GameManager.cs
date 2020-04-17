@@ -11,6 +11,11 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Variável para a pontuação
+        pontuacao = 0;
+        // Mostra o resultado do jogador na caixa de texto
+        textPontuacao.text = pontuacao.ToString();
+    }
 
     }
 
