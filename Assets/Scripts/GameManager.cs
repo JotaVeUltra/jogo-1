@@ -30,15 +30,6 @@ public class GameManager : MonoBehaviour
     public GameObject menuInicial;
     public GameObject menuCredito;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        // Variável para a pontuação
-        // pontuacao = 0;
-        // Mostra o resultado do jogador na caixa de texto
-        // textPontuacao.text = pontuacao.ToString();
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -93,12 +84,6 @@ public class GameManager : MonoBehaviour
     {
         pontuacao++;
         textPontuacao.text = pontuacao.ToString();
-    }
-
-    // Método para iniciar jogo
-    public void iniciarJogo()
-    {
-        //SceneManager.LoadScene(1);
     }
 
     // Método para reiniciar jogo
